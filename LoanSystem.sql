@@ -256,8 +256,6 @@ insert into LoanSystem values
     ('BX000241', '2023-01-16 12:15:32', 'isekol', '0005'),
     ('KL623548', '2024-04-12 16:48:02', 'vegrod', '0007');
 
-select * from Equipment;
-
 select LoanSystem.LoanDate, Equipment.EquipmentName, Equipment.Tree, Student.FirstName, Student.LastName from LoanSystem
 join Student on Student.StudentID = LoanSystem.StudentID
 join Equipment on Equipment.EquipmentID = LoanSystem.EquipmentID;
