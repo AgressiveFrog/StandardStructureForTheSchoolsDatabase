@@ -14,7 +14,8 @@
 
 UPDATED: 28/02/2023
 CONTACT: william.tuthamma@gmail.com
-COPY: 
+COPY: https://github.com/AgressiveFrog/StandardStructureForTheSchoolsDatabase/tree/main
+COPY HOLDER: AgressiveFrog
 
 
 
