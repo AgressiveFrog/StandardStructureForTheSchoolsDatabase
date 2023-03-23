@@ -43,7 +43,7 @@ create schema LoanSystem;
 use LoanSystem;
 
 create table  Student (
-	StudentID char(8) primary key,
+	StudentID char(10) primary key,
     FirstName char(35),
     LastName char(35),
     Class char(5)
@@ -232,21 +232,21 @@ insert into Equipment(EquipmentID, EquipmentName, Team, Tree, isAvalible) values
     
 insert into Student values
 	-- StudentID char 8, FirstName char 35, LastName char 35, class char 5
-    ('fraabd', 'Franol', 'Abdulahi', 'im1a'),
-    ('meqabd', 'Meqdam', 'Abdullah', 'im1a'),
+    ('fraabd01', 'Franol', 'Abdulahi', 'im1a'),
+    ('meqabd17', 'Meqdam', 'Abdullah', 'im1a'),
     ('odiand22', 'Odin', 'Kleveland', 'im1a'),
     ('geigje', 'Geir', 'Gjerde', 'TEAC'),
-    ('jelhla', 'Jely', 'Hlawnceu', 'im1a'),
+    ('jelhla26', 'Jely', 'Hlawnceu', 'im1a'),
     ('benive', 'Bente', 'Iversen', 'TEAC'),
-    ('alvjac', 'Alva', 'Jacobsen', 'im1a'),
+    ('alvjac28', 'Alva', 'Jacobsen', 'im1a'),
     ('wiljoh22', 'William', 'Johnsen', 'im1a'),
-    ('elikje', 'Elise', 'Kjervik', 'im1a'),
-    ('isekol', 'Iselin', 'Kolstad', 'im1a'),
+    ('elikje05', 'Elise', 'Kjervik', 'im1a'),
+    ('isekol01', 'Iselin', 'Kolstad', 'im1a'),
     ('kollar', 'Kolbjoorn', 'Larsen', 'TEAC'),
     ('sealon08', 'Sean', 'Long', 'im1a'),
     ('ismpre05', 'Ismael', 'Prescher', 'im1a'),
-    ('ingram', 'Ingelinn', 'Ramberg', 'im1a'),
-    ('vegrod', 'Vegard', 'Roodsand', 'im1a'),
+    ('ingram09', 'Ingelinn', 'Ramberg', 'im1a'),
+    ('vegrod15', 'Vegard', 'Roodsand', 'im1a'),
     ('isastra11', 'Isak', 'Strand', 'im1a'),
     ('oveaal', 'Ove', 'Aalo', 'TEAC');
     
