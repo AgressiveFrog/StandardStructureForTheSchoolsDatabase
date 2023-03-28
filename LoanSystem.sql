@@ -46,7 +46,8 @@ create table  Student (
 	StudentID char(10) primary key,
     FirstName char(35),
     LastName char(35),
-    Class char(5)
+    Class char(5),
+	StudentPassword char(30)
 
 );
 
@@ -62,7 +63,7 @@ create table Equipment (
 create table LoanSystem (
 	LoanID char(8) primary key,
     LoanDate datetime,
-    StudentID char(8),
+    StudentID char(10),
     EquipmentID int(4),
     constraint LoanStudentID foreign key (StudentID) references Student(StudentID),
     constraint LoanEquipmentID foreign key (EquipmentID) references Equipment(EquipmentID)
@@ -231,30 +232,30 @@ insert into Equipment(EquipmentID, EquipmentName, Team, Tree, isAvalible) values
     ('0106', 'Cullman', 'Gruppe 2', 'UNREGISTERED', '1');
     
 insert into Student values
-	-- StudentID char 8, FirstName char 35, LastName char 35, class char 5
-    ('fraabd01', 'Franol', 'Abdulahi', 'im1a'),
-    ('meqabd17', 'Meqdam', 'Abdullah', 'im1a'),
-    ('odiand22', 'Odin', 'Kleveland', 'im1a'),
-    ('geigje', 'Geir', 'Gjerde', 'TEAC'),
-    ('jelhla26', 'Jely', 'Hlawnceu', 'im1a'),
-    ('benive', 'Bente', 'Iversen', 'TEAC'),
-    ('alvjac28', 'Alva', 'Jacobsen', 'im1a'),
-    ('wiljoh22', 'William', 'Johnsen', 'im1a'),
-    ('elikje05', 'Elise', 'Kjervik', 'im1a'),
-    ('isekol01', 'Iselin', 'Kolstad', 'im1a'),
-    ('kollar', 'Kolbjoorn', 'Larsen', 'TEAC'),
-    ('sealon08', 'Sean', 'Long', 'im1a'),
-    ('ismpre05', 'Ismael', 'Prescher', 'im1a'),
-    ('ingram09', 'Ingelinn', 'Ramberg', 'im1a'),
-    ('vegrod15', 'Vegard', 'Roodsand', 'im1a'),
-    ('isastra11', 'Isak', 'Strand', 'im1a'),
-    ('oveaal', 'Ove', 'Aalo', 'TEAC');
+	-- StudentID char 8, FirstName char 35, LastName char 35, class char 5, StudentPassword char 30
+    ('fraabd01', 'Franol', 'Abdulahi', 'im1a', 'Test'),
+    ('meqabd17', 'Meqdam', 'Abdullah', 'im1a', 'Test'),
+    ('odiand22', 'Odin', 'Kleveland', 'im1a', 'Test'),
+    ('geigje', 'Geir', 'Gjerde', 'TEAC', 'Test'),
+    ('jelhla26', 'Jely', 'Hlawnceu', 'im1a', 'Test'),
+    ('benive', 'Bente', 'Iversen', 'TEAC', 'Test'),
+    ('alvjac28', 'Alva', 'Jacobsen', 'im1a', 'Test'),
+    ('wiljoh22', 'William', 'Johnsen', 'im1a', 'Test'),
+    ('elikje05', 'Elise', 'Kjervik', 'im1a', 'Test'),
+    ('isekol01', 'Iselin', 'Kolstad', 'im1a', 'Test'),
+    ('kollar', 'Kolbjoorn', 'Larsen', 'TEAC', 'Test'),
+    ('sealon08', 'Sean', 'Long', 'im1a', 'Test'),
+    ('ismpre05', 'Ismael', 'Prescher', 'im1a', 'Test'),
+    ('ingram09', 'Ingelinn', 'Ramberg', 'im1a', 'Test'),
+    ('vegrod15', 'Vegard', 'Roodsand', 'im1a', 'Test'),
+    ('isastra11', 'Isak', 'Strand', 'im1a', 'Test'),
+    ('oveaal', 'Ove', 'Aalo', 'TEAC', 'Test');
     
 insert into LoanSystem values
 	-- LoanID char 8, LoanDate datetime, StudentID char 8, EquipmentID int 4
     ('AA000001', '2023-01-01 10:23:59', 'wiljoh22', '0002'),
-    ('BX000241', '2023-01-16 12:15:32', 'isekol', '0005'),
-    ('KL623548', '2024-04-12 16:48:02', 'vegrod', '0007');
+    ('BX000241', '2023-01-16 12:15:32', 'isekol01', '0005'),
+    ('KL623548', '2024-04-12 16:48:02', 'vegrod15', '0007');
 
 select LoanSystem.LoanDate, Equipment.EquipmentName, Equipment.Tree, Student.FirstName, Student.LastName from LoanSystem
 join Student on Student.StudentID = LoanSystem.StudentID
