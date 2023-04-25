@@ -58,7 +58,7 @@ create table Equipment (
     EquipmentPicture blob,
     Team char(10),
     Tree char(20),
-    isAvalible bool
+    isAvailable bool
 
 );
 
@@ -72,7 +72,7 @@ create table LoanSystem (
 
 );
 
-insert into Equipment(EquipmentID, EquipmentName, EquipmentPicture, Team, Tree, isAvalible) values
+insert into Equipment(EquipmentID, EquipmentName, EquipmentPicture, Team, Tree, isAvailable) values
 	-- EquipmentID int 4, EquipmentName char 30, Team char 10, Tree char 20, isAvalible bool
 	('0001', 'Canon EOS 90D', '', 'Gruppe 1', 'Lukkerhus', '1'),
 	('0002', 'Canon EOS 90D', '', 'Gruppe 1', 'Lukkerhus', '1'),
